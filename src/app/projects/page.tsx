@@ -1,17 +1,11 @@
-import React from 'react';
-import PageContainer from '@/components/layout/PageContainer';
-import SectionContainer from '@/components/layout/SectionContainer';
+import ProjectsPageHeader from "@/components/projects/ProjectPageHeader";
+import ProjectsList from "@/components/projects/ProjectsList";
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
-    <PageContainer>
-      <SectionContainer className="min-h-[70vh]">
-        <h1 className="text-h1 text-foreground mb-4">Projects Portfolio</h1>
-        <p className="text-body text-muted-foreground mb-6">
-          This is a placeholder for the Projects page. In future sprints, this will display interactive cards and detailed case studies of mobile applications.
-        </p>
-        <span className="text-small text-accent font-mono block">/projects - Route Active</span>
-      </SectionContainer>
-    </PageContainer>
+    <main className="min-h-screen bg-[#0B0F17] text-white">
+      <ProjectsPageHeader />
+      <ProjectsList />
+    </main>
   );
 }

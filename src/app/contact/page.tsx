@@ -5,7 +5,7 @@ import SectionContainer from '@/components/layout/SectionContainer';
 export default function Contact() {
   return (
     <PageContainer>
-      <SectionContainer className="min-h-[70vh]">
+      <SectionContainer className="min-h-[70vh] pt-20">
         <h1 className="text-h1 text-foreground mb-4">Contact Akram</h1>
         <p className="text-body text-muted-foreground mb-6">
           This is a placeholder for the Contact page. It will eventually house a professional inquiry form and links to professional platforms.

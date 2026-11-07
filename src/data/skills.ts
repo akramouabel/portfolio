@@ -1,41 +1,97 @@
 export interface Skill {
   name: string;
   category: "Languages" | "Frameworks & SDKs" | "Tools & Platforms" | "Methodologies";
-  level: "Advanced" | "Intermediate" | "Familiar";
 }
 
 export interface Service {
+  id: string;
   title: string;
   description: string;
   iconName: string;
+  technologies: string[];
 }
 
-/**
- * TEMPORARY PLACEHOLDER DATA
- * To verify the project build and typing. Will be replaced in Sprint 02.
- */
-export const SAMPLE_SKILLS: Skill[] = [
-  { name: "Dart", category: "Languages", level: "Advanced" },
-  { name: "Kotlin", category: "Languages", level: "Advanced" },
-  { name: "Swift", category: "Languages", level: "Intermediate" },
-  { name: "TypeScript", category: "Languages", level: "Intermediate" },
-  { name: "Flutter", category: "Frameworks & SDKs", level: "Advanced" },
-  { name: "Android SDK", category: "Frameworks & SDKs", level: "Advanced" },
-  { name: "iOS SDK", category: "Frameworks & SDKs", level: "Intermediate" },
-  { name: "Firebase", category: "Tools & Platforms", level: "Advanced" },
-  { name: "Git & GitHub", category: "Tools & Platforms", level: "Advanced" },
-  { name: "Clean Architecture", category: "Methodologies", level: "Advanced" },
+export interface WorkStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export const SKILLS: Skill[] = [
+  { name: "Dart", category: "Languages" },
+  { name: "Python", category: "Languages" },
+  { name: "Flutter", category: "Frameworks & SDKs" },
+  { name: "Firebase", category: "Tools & Platforms" },
+  { name: "Laravel", category: "Frameworks & SDKs" },
+  { name: "REST APIs", category: "Tools & Platforms" },
+  { name: "Clean Architecture", category: "Methodologies" },
+  { name: "Git & GitHub", category: "Tools & Platforms" },
 ];
 
-export const SAMPLE_SERVICES: Service[] = [
+export const SERVICES: Service[] = [
   {
-    title: "Cross-Platform App Development",
-    description: "Building polished, native-performing Android and iOS apps from a single codebase using Flutter.",
+    id: "mobile-apps",
+    title: "Mobile Applications",
+    description:
+      "Build cross-platform Flutter applications with polished interfaces and scalable, maintainable architecture for both Android and iOS.",
     iconName: "Smartphone",
+    technologies: ["Flutter", "Dart", "Android", "iOS"],
   },
   {
-    title: "Concept-to-Product Architecture",
-    description: "Taking your mobile ideas and architecting the clean, testable, and scalable framework they need.",
-    iconName: "Layers",
+    id: "mvp-development",
+    title: "MVP Development",
+    description:
+      "Turn an idea into a functional mobile product ready for real users, validation, and iteration — without unnecessary complexity.",
+    iconName: "Zap",
+    technologies: ["Flutter", "Firebase", "REST APIs"],
+  },
+  {
+    id: "api-backend",
+    title: "API & Backend Integration",
+    description:
+      "Connect mobile applications with REST APIs, Firebase, and backend services — keeping data flowing reliably and efficiently.",
+    iconName: "GitMerge",
+    technologies: ["REST APIs", "Firebase", "Laravel", "Flask"],
+  },
+  {
+    id: "ai-features",
+    title: "AI-Powered Features",
+    description:
+      "Integrate intelligent recommendations, assistants, and AI-powered functionality into mobile products that genuinely improve the user experience.",
+    iconName: "Sparkles",
+    technologies: ["Python", "Flask", "ML APIs"],
+  },
+];
+
+export const WORK_STEPS: WorkStep[] = [
+  {
+    number: "01",
+    title: "Discover",
+    description:
+      "Understand the product, users, requirements and goals before writing a single line of code.",
+  },
+  {
+    number: "02",
+    title: "Plan",
+    description:
+      "Define features, architecture and implementation strategy — creating a clear path to delivery.",
+  },
+  {
+    number: "03",
+    title: "Build",
+    description:
+      "Develop the application with a focus on quality, performance and real-world usability.",
+  },
+  {
+    number: "04",
+    title: "Test",
+    description:
+      "Validate functionality, responsiveness and reliability across devices and edge cases.",
+  },
+  {
+    number: "05",
+    title: "Deliver",
+    description:
+      "Prepare the product for handoff, deployment and confident future iteration.",
   },
 ];
